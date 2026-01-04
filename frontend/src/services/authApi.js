@@ -2,27 +2,27 @@ import axios from "axios";
 
 export const loginUser = (credentials) => {
   return axios.post(
-    "http://localhost:5000/student/login",
+    "https://classroom-4pkw.onrender.com/student/login",
     credentials
   );
 };
 
 export const loginAdmin = (credentials) => {
   return axios.post(
-    "http://localhost:5000/admin/login",
+    "https://classroom-4pkw.onrender.com/admin/login",
     credentials
   );
 };
 
 export const registerStudent = (credentials) => {
   return axios.post(
-    "http://localhost:5000/student/register",
+    "https://classroom-4pkw.onrender.com/student/register",
     credentials
   )
 }
 export const uploadNotes = (token, formData) => {
   return axios.post(
-    "http://localhost:5000/notes/upload",
+    "https://classroom-4pkw.onrender.com/notes/upload",
     formData,
     {
       headers: {

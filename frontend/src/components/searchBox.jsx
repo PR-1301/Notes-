@@ -12,15 +12,15 @@ function SearchBox({ setNotes }) {
     const input = searchText.trim().toUpperCase();
 
     if (!isNaN(input)) {
-      url = `http://localhost:5000/notes/year/${input}`;
+      url = `https://classroom-4pkw.onrender.com/notes/year/${input}`;
     } 
     else if (
       ["CSE", "ECE", "EEE", "MECH", "CIVIL", "IT", "BME", "AIDS", "AIML"].includes(input)
     ) {
-      url = `http://localhost:5000/notes/department/${input}`;
+      url = `https://classroom-4pkw.onrender.com/notes/department/${input}`;
     } 
     else {
-      url = `http://localhost:5000/notes/subject/${searchText}`;
+      url = `https://classroom-4pkw.onrender.com/notes/subject/${searchText}`;
     }
 
     try {

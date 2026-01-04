@@ -17,7 +17,7 @@ function Dashboard() {
 
     const getallNotes = async () =>{
         try{
-            const res = await axios.get("http://localhost:5000/notes/allnotes");
+            const res = await axios.get("https://classroom-4pkw.onrender.com/notes/allnotes");
             setNotes(res.data.notes);
         } catch(err){
             console.error("Error fetching notes", err)

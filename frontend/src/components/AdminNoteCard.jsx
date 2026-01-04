@@ -16,7 +16,7 @@ function AdminNoteCard({ note, onAction }) {
     const updateStatus = async (status) => {
         try {
             await axios.patch(
-                `http://localhost:5000/notes/updateStatus/${note._id}`,
+                `https://classroom-4pkw.onrender.com/notes/updateStatus/${note._id}`,
                 { status: status }
             );
             onAction(note._id);

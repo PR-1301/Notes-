@@ -15,7 +15,7 @@ function ApproveNotes() {
 
     const getPendingNotes = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/notes/pending");
+            const res = await axios.get("https://classroom-4pkw.onrender.com/notes/pending");
             setNotes(res.data.notes);
         } catch (err) {
             console.error("Error fetching pending notes", err);

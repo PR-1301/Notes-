@@ -22,19 +22,19 @@ function AdminPage() {
     };
 
     fetchNotes(
-      "http://localhost:5000/notes/pending",
+      "https://classroom-4pkw.onrender.com/notes/pending",
       setPendingNotes,
       "Failed to fetch pending notes"
     );
 
     fetchNotes(
-      "http://localhost:5000/notes/approved",
+      "https://classroom-4pkw.onrender.com/notes/approved",
       setApprovedNotes,
       "Failed to fetch approved notes"
     );
 
     fetchNotes(
-      "http://localhost:5000/notes/rejected",
+      "https://classroom-4pkw.onrender.com/notes/rejected",
       setRejectedNotes,
       "Failed to fetch rejected notes"
     );
