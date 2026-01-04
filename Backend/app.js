@@ -12,7 +12,8 @@ const adminRoutes = require("./Routes/adminRoutes");
 const notesRoutes = require("./Routes/notesRoutes");
 const updateRoutes = require("./Routes/updateRoutes");
 
-const port = 5000;
+const port = process.env.PORT || 5000;
+
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -23,7 +24,15 @@ mongoose.connection.once("open", () => {
 });
       
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://classroom-gamma-three.vercel.app/" 
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
