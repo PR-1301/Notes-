@@ -42,7 +42,7 @@ function AdminPage() {
 
   return (
     <div>
-      <h1>Admin Page</h1>
+      <h1>d</h1>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
 
