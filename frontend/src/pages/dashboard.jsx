@@ -67,18 +67,18 @@ function Dashboard() {
           </div>
         </Card>
 
-        <div>
-          {loading ? (
-            <Card className="p-8">
-              <div className="text-center">
-                <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent mb-4"></div>
-                <p className="text-gray-600">Loading Notes...</p>
-              </div>
-            </Card>
-          ) : (
-            <NotesList notes={notes} />
-          )}
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {loading ? (
+    <Card className="p-8">
+      <div className="text-center">
+        <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent mb-4"></div>
+        <p className="text-gray-600">Loading Notes...</p>
+      </div>
+    </Card>
+  ) : (
+    <NotesList notes={notes} />
+  )}
+</div>
       </main>
     </div>
     )
